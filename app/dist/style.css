@@ -1,0 +1,46 @@
+body {
+    background-color: white;
+}
+
+p {
+    color: #fff;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+  
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+}
+
+
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+th {
+    background-color: #F96332;
+    color: white;
+}

@@ -1,0 +1,28 @@
+﻿body {
+    background-color: #ff6a00;
+}
+
+@bg-color: #ff0000;
+
+p {
+    color: lighten(@bg-color, 50%);
+    .something {
+        .hello {
+            &:hover {
+
+            }
+        }
+    }
+}
+
+p .something {
+
+}
+
+p .something .hello {
+
+}
+
+p .something .hello:hover {
+
+}

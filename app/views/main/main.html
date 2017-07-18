@@ -1,0 +1,184 @@
+﻿
+<style>
+    
+
+body {
+    direction: ltr;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+p{
+    color:black;
+}
+
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(51, 51, 51, 0.34);
+    z-index: 10;
+  }
+
+#spinner {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60px;
+}
+</style>
+
+<div class="spinner" ng-show="loading">
+    <img id="spinner" src="/app/images/loading_gif.gif" />
+</div>
+
+
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+
+        <!-- menu -->
+        <div class="col-md-3">
+            <p class="lead">Dad's Shop</p>
+            <div class="list-group">
+                <a href="#" class="list-group-item">Category 0</a>
+                <a href="#" class="list-group-item">Category 2</a>
+                <a href="#" class="list-group-item">Category 3</a>
+                <a href="#" class="list-group-item">Category 4</a>
+                <a href="#" class="list-group-item">Category 5</a>
+                <a href="#" class="list-group-item">Category 6</a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+
+            <!-- gallery -->
+            <div class="row carousel-holder">
+                <div class="col-md-12">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img class="slide-image" src="/app/images/test_pic2.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="slide-image" src="/app/images/test_pic2.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img class="slide-image" src="/app/images/test_pic2.png" alt="">
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- products -->
+            <div class="row">
+                <div ng-repeat="product in products" class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="thumbnail" ng-click="clickOnProduct(product)">
+                        <img style="height: 122px;" ng-src="{{product.Pic}}" alt="">
+                        <div class="caption">
+                            <h4 class="pull-right">{{product.Price}}</h4>
+                            <h4>
+                                <a href="#">{{product.Name}}</a>
+                            </h4>
+                            <p>{{product.Description}}</p>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right">15 reviews</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+
+            <button ng-click="loadMore()">More</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- /.Footer -->
+<div class="container">
+    <hr>
+    <footer style="background-color:black;">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
