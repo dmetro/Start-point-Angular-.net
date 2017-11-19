@@ -1,4 +1,4 @@
-﻿angular.module('dadsShop', ['ui.router', 'jkuri.datepicker', 'ui.bootstrap'])
+﻿angular.module('Getpensia', ['ui.router', 'ui.bootstrap'])
     // Directives
     //.directive(....)
 
@@ -18,3 +18,6 @@
     .controller('uploadcontent', function () { })
     .controller('department', function () { })
     .controller('product', function () { })
+    .controller('signupStep1', function () { })
+
+

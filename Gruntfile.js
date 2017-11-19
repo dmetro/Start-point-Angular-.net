@@ -1,4 +1,4 @@
-﻿/// <reference path="bower_components/jquery/dist/jquery.min.js" />
+﻿
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -19,7 +19,6 @@ module.exports = function (grunt) {
         concat: {
             libs: {
                 src: [
-                    './bower_components/chance/chance.js',
                     './bower_components/angular/angular.js',
                     './bower_components/angular-ui-router/release/angular-ui-router.min.js',
                     './bower_components/angular-jwt/dist/angular-jwt.js',

@@ -39,4 +39,21 @@ public class UserController : ApiController
         //var us = userId;
         return Ok(new { Error = "", data = "" });
     }
+
+
+    //[HttpPost]
+    //[Route("login")]
+    //public IHttpActionResult setStep([FromBody]  )
+    //{
+
+    //    if (obj.userName != "")
+    //    {
+    //        //sda
+    //        return Ok(new { Error = "", data = obj });
+    //    }
+    //    else
+    //    {
+    //        return Ok(new { Error = "User not exist", data = "" });
+    //    }
+    //}
 }

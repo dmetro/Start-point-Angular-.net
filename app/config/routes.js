@@ -4,30 +4,30 @@
     //console.log("routes");
 
     $stateProvider
-     .state('main', {
-         url: '/main',
-         templateUrl: '/app/views/main/main.html',
-         controller: require('controllers/main.js')
-     })
-     .state('productPage', {
-        url: '/productPage',
-        templateUrl: 'app/views/productPage/productPage.html',
-        controller: require('controllers/product.js')
-     })
-    .state('login', {
-        url: '/login',
-        templateUrl: 'app/views/user/login.html',
-        controller: require('controllers/user.js')
-    })
-    .state('register', {
-        url: '/register',
-        templateUrl: 'app/views/user/register.html',
-        controller: require('controllers/user.js')
-    })
-    .state('favorite', {
-        url: '/favorite',
-        templateUrl: 'app/views/user/favorite.html',
-        controller: require('controllers/user.js')
-    })
+        .state('main', {
+            url: '/main',
+            templateUrl: '/app/views/main/main.html',
+            controller: require('controllers/main.js')
+        })
+        .state('initial', {
+            url: '/initial',
+            templateUrl: '/app/views/signUpForm/initial.html',
+            controller: require('controllers/signup/InitialSignup.js'),
+        })
+
+        .state('initial.step1', {
+            url: '/1',
+            templateUrl: '/app/views/signUpForm/userStepOne.html',
+            controller: require('controllers/signup/signupStep1.js') ,
+            step: 1, // <- Identify the current step inside the SignupCtrl,
+
+        })
+        .state('initial.step2', {
+            url: '/2',
+            templateUrl: 'views/initial-step2.html',
+            controller: 'InitialStep2Ctrl',
+            step: 2, // <- Identify the current step inside the SignupCtrl,
+
+        })
 
 };
