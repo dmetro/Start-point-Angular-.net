@@ -1,4 +1,4 @@
-﻿angular.module('Getpensia', ['ui.router', 'ui.bootstrap', 'ngStorage',])
+﻿angular.module('Getpensia', ['ui.router', 'ui.bootstrap', 'ngStorage', 'mgo-angular-wizard'])
     // Directives
     //.directive(....)
 

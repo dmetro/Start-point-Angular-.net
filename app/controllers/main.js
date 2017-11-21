@@ -1,9 +1,21 @@
-﻿module.exports = function ($scope, BackendService, $state, dataService) {
+﻿module.exports = function ($scope, BackendService, $state, dataService, WizardHandler) {
 
     $scope.loading = true;
     $scope.customer = {};
     $scope.customerStep = {};
-    console.log("sss")
+
+    var steps = {
+        "formInit": false,
+        "step1": false,
+        "step2": false,
+        "step3": false,
+        "formFinished": false
+    }
+    
+    $scope.customerStep = steps;
+    //$scope.steps = steps;
+
+
 
     //var data = JSON.stringify({ skip: $scope.skip, take: $scope.take});
     //BackendService.getAllProducts(data).then(function (response) {
@@ -38,18 +50,14 @@
     //    });
     //}
 
-    $scope.FinishStepOne = function()
-    {
-        console.log("Customer Details", $scope.customer)
-        $state.go('productPage');
+
+
+    $scope.goToSignUpForm = function () {
+        $scope.customerStep.formInit = true;
+        localStorage.steps = JSON.stringify($scope.customerStep);
+        $state.go('form');
     }
 
-    $scope.goToSignUpForm = function ()
-    {
-        console.log("gotoSignUp formw")
-        $state.go('UserInfo');
-    }
 
-    
 
 }

@@ -29,10 +29,7 @@ module.exports = function (grunt) {
                     './bower_components/jquery/dist/jquery.js',
                     './bower_components/angular-bootstrap/ui-bootstrap.min.js',
                     './bower_components/ngstorage/ngStorage.min.js',
-
-
-                    
-
+                    './bower_components/angular-wizard/dist/angular-wizard.min.js',
                 ],
                 dest: './app/dist/libs.bundle.js',
             },

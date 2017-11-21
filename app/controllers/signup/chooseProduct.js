@@ -96,5 +96,4 @@
     $scope.gemelhisahon.push(gemelProduct1);
     $scope.gemelhisahon.push(gemelProduct2);
     $scope.gemelhisahon.push(gemelProduct3);
-    // console.log("Pension products", $scope.pensionProducts);
 }

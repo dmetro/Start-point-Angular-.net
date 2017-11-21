@@ -12,6 +12,7 @@
     "jquery": "^3.2.1",
     "angular-bootstrap": "^2.5.0",
     "bootstrap": "^3.3.7",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "angular-wizard": "^1.1.1"
   }
 }

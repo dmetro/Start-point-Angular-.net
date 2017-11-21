@@ -9,17 +9,22 @@
             templateUrl: '/app/views/main/main.html',
             controller: require('controllers/main.js')
         })
-        .state('UserInfo', {
+        .state('form', {
+            url: '/form',
+            templateUrl: '/app/views/signUpForm/form.html',
+            controller: require('controllers/signup/form.js')
+        })
+        .state('form.UserInfo', {
             url: '/User',
             templateUrl: '/app/views/signUpForm/userStepOne.html',
             controller: require('controllers/signup/signupStep1.js')
         })
-        .state('UserInfoPart2', {
+        .state('form.UserInfoPart2', {
             url: '/moreUserInfo',
             templateUrl: '/app/views/signUpForm/userStepTwo.html',
             controller: require('controllers/signup/signupStep2.js')
         })
-        .state('chooseProduct', {
+        .state('form.chooseProduct', {
             url: '/chooseProduct',
             templateUrl: '/app/views/signUpForm/ChooseProduct.html',
             controller: require('controllers/signup/chooseProduct.js')
