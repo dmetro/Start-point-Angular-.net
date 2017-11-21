@@ -1,4 +1,4 @@
-﻿angular.module('Getpensia', ['ui.router', 'ui.bootstrap'])
+﻿angular.module('Getpensia', ['ui.router', 'ui.bootstrap', 'ngStorage',])
     // Directives
     //.directive(....)
 
@@ -19,5 +19,10 @@
     .controller('department', function () { })
     .controller('product', function () { })
     .controller('signupStep1', function () { })
+
+    .run(function ($rootScope) {
+        $rootScope.user = {};
+
+    });
 
 

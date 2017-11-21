@@ -47,7 +47,7 @@
     $scope.goToSignUpForm = function ()
     {
         console.log("gotoSignUp formw")
-        $state.go('initial');
+        $state.go('UserInfo');
     }
 
     

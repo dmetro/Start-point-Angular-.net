@@ -28,6 +28,9 @@ module.exports = function (grunt) {
                     './bower_components/ngDatepicker/src/js/ngDatepicker.js',
                     './bower_components/jquery/dist/jquery.js',
                     './bower_components/angular-bootstrap/ui-bootstrap.min.js',
+                    './bower_components/ngstorage/ngStorage.min.js',
+
+
                     
 
                 ],
